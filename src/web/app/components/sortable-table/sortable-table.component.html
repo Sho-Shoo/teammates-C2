@@ -24,6 +24,7 @@
         ></ndc-dynamic>
         <ng-container *ngIf="!item.customComponent && item.displayValue">{{ item.displayValue }}</ng-container>
         <ng-container *ngIf="!item.customComponent && !item.displayValue">{{ item.value }}</ng-container>
+        <ng-container *ngIf="item.button"><div [innerHTML]="item.button | safeHtml"></div></ng-container>
       </td>
     </tr>
   </tbody>
